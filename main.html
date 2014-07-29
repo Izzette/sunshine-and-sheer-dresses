@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+
+<title>{Title}</title>
+
+<style type="text/css">
+
+  /* universal CSS */
+  
+  h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 40px;
+    font-style: italic;
+    vertical-align: middle;
+  }
+  h2 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+    vertical-align: middle;
+  }
+  h3 {
+    font-family: "Palatino Linotype", "Book Antiqua", serif;
+    font-size: 20px;
+    vertical-align: middle;
+  }
+  h4 {
+    font-family: "Arial", arial, sans-serif;
+    font-size: 15px;
+    vertical-align: middle;
+  }
+  blockquote {
+    font-family: "Helvetica", normal helvetica, sans-serif;
+    font-size: 15px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 10px;
+    padding-left: 5px;
+    border-left: 2px solid rgb(15, 10, 10);
+  }
+  hr.light {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    }
+  hr.heavy {
+    border: none;
+    border-top: medium double rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+  }
+  a {
+    text-decoration: underline;
+  }
+  a:link {
+    color: rgb(0, 0, 0);
+  }
+  a:visited {
+    color: rgb(0, 0, 0);
+  }
+  a:hover {
+    color: rgb(0, 120, 255);
+  }
+  
+  /* header CSS */
+  
+  header {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FAC5CC;
+  }
+  #head {
+    width: 500px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FAC5CC;
+  }
+  #blog-title {
+    padding-left: 15px;
+    width: 336px;
+    height: 175px;
+  }
+  #blog-title-text {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+  }
+  #blog-avatar {
+    width: 164px;
+    height: 150px;
+  }
+  #blog-avatar-figure {
+    display: table-cell;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #description {
+  	width: 500px;
+  	height: 75px;
+  	margin-left: auto;
+  	margin-right: auto;
+  }
+  #jblog-description {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #blog-description-text {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 17px;
+  }
+  nav {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FAC5CC;
+  }
+  #nav {
+    width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  td.nav {
+    width: 125px;
+    vertical-align: middle;
+    font-family: "Palatino Linotype", "Book Antiqua", serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* posts CSS */
+  
+  body {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FAC5CC;
+  }
+  article {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgb(125, 125, 100);
+    background-color: #FFFFFF;
+  }
+  table.posts {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  th.post-title {
+    height: 40px;
+    vertical-align: middle;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+    text-align: center;
+  }
+  th.whole {
+    height: 50px;
+    vertical-align: middle;
+  }
+  th.half {
+    height: 25px;
+    vertical-align: middle;
+  }
+  td.posts {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  td.caption {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Helvetica", normal helvetica, sans-serif;
+    font-size: 15px;
+  }
+  
+  /* foot CSS */
+  
+  div.pagination {
+    text-align: center;
+  }
+  td.foot {
+    width: 175px;
+  }
+  #foot {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #rightfoot {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+    text-align: left;
+  }
+  #leftfoot {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+    text-align: right;
+  }
+  #footspace {
+    width: 150px;
+  }
+</style>
+<html>
+  <br>
+  <header>
+    <table id="head">
+      <td id="blog-title">
+        <p id="blog-title-text">
+          <h1>{Title}</h1>
+        </p>
+      </td>
+      <td id="blog-avatar">
+        <figure id="blog-avatar-figure">
+          <img src="{PortraitURL-128}">
+        </figure>
+      <td>
+    </table>
+    <hr class="light">
+    <table id="description">
+      <td id="blog-description">
+        <p id="blog-description-text">
+          {Description}
+        </p>
+      </td>
+    </table>
+    <hr class="light">
+    <nav>
+      <table id="nav">
+        {block:AskEnabled}
+          <td class="nav">
+            <a href="/ask">Ask</a>
+          </td>
+        {/block:AskEnabled}
+        {block:SubmissionsEnabled}
+          <td class="nav">
+            <a href="/submit">Submit</a>
+          </td>
+        {/block:SubmissionsEnabled}
+        <td class="nav">
+          <a href="javascript:;" id="search">Search</a>
+        </td>
+      </table>
+    </nav>
+    <hr class="heavy">
+  </header>
+  <br>
+  <body>
+	{block:Posts}
+	  <article>
+	    <table class="posts">
+	      <th class="whole"></th>
+	    {block:Text}
+	      {block:Title}
+	        <th class="post-title">
+	          <a href="{Permalink}">{Title}</a>
+	        </th>
+	      {/block:Title}
+	      <tr><td class="posts"><p class="post-body">{Body}</p></td></tr>
+	    {/block:Text}
+	    {block:Photo}
+	      <tr><td class="posts">
+	        <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+	      </td></tr>
+	      <th class="half"></th>
+	      {block:Caption}
+	        <tr><td class="caption">{Caption}</td></tr>
+	      {/block:Caption}
+	    {/block:Photo}
+	    {block:Panorama}
+	      <tr><td class="posts">
+	        {linkOpenTag}
+	          <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />
+	        {LinkCloseTag}
+	      </td></tr>
+	      <th class="half"></th>
+	      {block:Caption}
+	        <tr><td class="caption">{Caption}</td></tr>
+	      {/block:Caption}
+	    {/block:Panorama}
+	    {block:Photoset}
+	      <tr><tr><td class="posts">
+	        {Photoset-500}
+	      </td></tr>
+	      <th class="half"></th>
+	      {block:Caption}
+	        <tr><td class="caption">{Caption}</td></tr>
+	      {/block:Caption}
+	    {/block:Photoset}
+	    {block:Quote}
+	      <tr><td class="posts">
+	        <h3>"{Quote}"</h3>
+	      </td></tr>
+	      <th class="half"><hr></th>
+	      {block:Source}
+	        <tr><td class="posts">
+	          <p class="post-body">{Source}</p>
+	        </td></tr>
+	      {/block:Source}
+	    {/block:Quote}
+	    {block:Link}
+	      <tr><td class="posts">
+	        <a href="{URL}" {Target}>{Name}</a>
+	      </td></tr>
+	      <th class="half"><hr></th>
+	      {block:Description}
+	        <tr><td class="posts"><p class="post-body">{Description}</p></td></tr>
+	      {/block:Description}
+	    {/block:Link}
+	    {block:Video}
+	      <tr><td class="posts">
+	        {Video-500}
+	      </td></tr>
+	      <th class="half"></th>
+	      {block:Caption}
+	        <tr><td class="caption">{Caption}</td></tr>
+	      {/block:Caption}
+	    {/block:Video}
+	    {block:Audio}
+	      <tr><td class="posts">
+	        {AudioEmbed}
+	      </td></tr>
+	      <th class="half"><hr></th>
+	      {block:Caption}
+	        <tr><td class="caption">{Caption}</td></tr>
+	      {/block:Caption}
+        {/block:Audio}
+        <th class="whole"></th>
+      </table></article>
+      <br>
+    {/block:Posts}
+  </body>
+  <br>
+  {block:Pagination}
+  <footer>
+    <div class="pagination">
+      <article id="feet"><table>
+      <tr><td class="foot">{block:PreviousPage}<a href="{PreviousPage}"><p id="leftfoot">«</p></a>{/block:PreviousPage}</td>
+      <td id="footspace"></td>
+      <td class="foot">{block:NextPage}<a href="{NextPage}"><p id="rightfoot">»</p></a>{/block:NextPage}</td></tr>
+      </table></article>
+    </div>
+  </footer>
+  {/block:Pagination}
+</html>

@@ -1,0 +1,4 @@
+Still need to add:
+  Posts: Reblog, favorite buttons
+  Nav: Home, Search, Ask, Submit
+  Foot: back-to-top button
